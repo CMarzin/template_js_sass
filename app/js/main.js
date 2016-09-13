@@ -8,6 +8,7 @@ Loader.loadData('data/fr.json', function(data) {
         test: data.test
     });
     $('#test').html(test);
+    console.log('test');
   }
   launch();
 });

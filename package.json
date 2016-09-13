@@ -1,34 +1,41 @@
 {
-  "name": "alex",
+  "name": "template_little_project",
   "version": "1.0.0",
-  "description": "powerful editor",
+  "description": "- npm install\r   - bower install",
   "main": "gulpfile.js",
   "dependencies": {
-    "browser-sync": "^2.14.0",
-    "gulp": "^3.9.1",
-    "gulp-handlebars": "^4.0.0",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-jshint": "^2.0.1",
-    "gulp-strip-debug": "^1.1.0"
+    "gulp-wrap": "^0.13.0",
+    "jshint": "^2.9.3"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
     "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jshint": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-wrap": "^0.13.0"
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-wrap": "^0.13.0",
+    "jshint": "^2.9.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CMarzin/Alex.git"
+    "url": "git+https://github.com/CMarzin/template_handlebar.git"
   },
-  "author": "Corentin Marzin",
+  "keywords": [
+    "template"
+  ],
+  "author": "Corentin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CMarzin/Alex/issues"
+    "url": "https://github.com/CMarzin/template_handlebar/issues"
   },
-  "homepage": "https://github.com/CMarzin/Alex#readme"
+  "homepage": "https://github.com/CMarzin/template_handlebar#readme"
 }

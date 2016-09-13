@@ -1,11 +1,11 @@
 this["MyApp"] = this["MyApp"] || {};
 this["MyApp"]["templates"] = this["MyApp"]["templates"] || {};
 this["MyApp"]["templates"]["test"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "<h1>"
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.test : depth0)) != null ? stack1.title : stack1), depth0))
-    + "</h1>\n<h1>"
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.test : depth0)) != null ? stack1.yolo : stack1), depth0))
-    + "</h1>\n";
+    + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h1>\r\n<h1>"
+    + alias3(((helper = (helper = helpers.yolo || (depth0 != null ? depth0.yolo : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"yolo","hash":{},"data":data}) : helper)))
+    + "</h1>\r\n";
 },"useData":true});
