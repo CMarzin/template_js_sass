@@ -52,7 +52,11 @@ gulp.task('style', function() {
         browsers: ['last 4 versions'],
         cascade: false
     }))
+<<<<<<< HEAD
     .pipe(gulp.dest('dist/css'))
+=======
+    .pipe(gulp.dest('app/css'))
+>>>>>>> fa7337f5116cb74cc8d23857e7def937f25633b8
 })
 
 // Compress imgs
