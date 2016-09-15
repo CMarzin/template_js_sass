@@ -18,8 +18,8 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('default'))
     .on('error', function(error) {
         console.error('' + error);
-    });
-});
+    })
+})
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
@@ -29,8 +29,8 @@ gulp.task('scripts', function() {
     .pipe(rename('all.min.js'))
     .pipe(stripDebug()) // remove console.log alert etc..
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
-});
+    .pipe(gulp.dest('dist/js'))
+})
 
 // Compile our Handlebar
 gulp.task('templates', function() {
@@ -43,7 +43,7 @@ gulp.task('templates', function() {
         }))
         .pipe(concat('templates.js'))
         .pipe(gulp.dest('dist/js/'));
-});
+})
 
 gulp.task('style', function() {
   return gulp.src('app/sass/**/*.scss') // Gets all files ending with .scss in app/scss
@@ -52,8 +52,8 @@ gulp.task('style', function() {
         browsers: ['last 4 versions'],
         cascade: false
     }))
-    .pipe(gulp.dest('app/css'))
-});
+    .pipe(gulp.dest('dist/css'))
+})
 
 // Compress imgs
 gulp.task('imagemin', function() {
@@ -61,15 +61,15 @@ gulp.task('imagemin', function() {
     .pipe(imagemin({
         progressive: true
     }))
-    .pipe(gulp.dest('dist/img'));
-});
+    .pipe(gulp.dest('dist/img'))
+})
 
-gulp.task('build', ['imagemin', 'templates', 'style', 'scripts']);
+gulp.task('build', ['imagemin', 'templates', 'style', 'scripts'])
 
-gulp.task('dev', ['lint', 'style', 'scripts', 'templates'], function (){
-  gulp.watch('app/sass/**/*.scss', ['sass']);
-  gulp.watch('app/*.html');
-  gulp.watch('app/js/**/*.js', ['lint', 'scripts']);
-  gulp.watch('templates/*.hbs', ['templates']);
+gulp.task('dev', function (){
+  gulp.watch('app/sass/**/*.scss', ['style'])
+  gulp.watch('app/*.html')
+  gulp.watch('app/js/**/*.js', ['lint', 'scripts'])
+  gulp.watch('app/templates/*.hbs', ['templates'])
   // Other watchers
-});
+})

@@ -1,13 +1,16 @@
 Loader.loadData('data/fr.json', function(data) {
   data = JSON.parse(data);
   var test = data.test;
+  var t = test;
 
   function launch() {
-    var t = test;
-    var test = MyApp.templates.test({
-        test: data.test
-    });
-    $('#test').html(test);
+
+    var content_test = MyApp.templates.test(t);
+
+    $('#test').html(content_test);
+
   }
+
+  Anim.init();
   launch();
 });
