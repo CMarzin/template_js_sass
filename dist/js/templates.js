@@ -5,7 +5,7 @@ this["MyApp"]["templates"]["test"] = Handlebars.template({"compiler":[6,">= 2.0.
 
   return "<h1>"
     + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
-    + "</h1>\r\n<h1>"
+    + "</h1>\n<h2>"
     + alias3(((helper = (helper = helpers.yolo || (depth0 != null ? depth0.yolo : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"yolo","hash":{},"data":data}) : helper)))
-    + "</h1>\r\n";
+    + "</h2>\n";
 },"useData":true});

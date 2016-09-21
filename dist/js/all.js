@@ -1,3 +1,17 @@
+var Anim = function(exports) {
+
+    exports.init = function() {
+      scroll();
+    }
+
+    function scroll() {
+      console.log('scroll');
+    }
+
+    return exports;
+
+}({});
+
 var Loader = function( exports )
 {
     exports.loadData = function(json,cb){
@@ -22,14 +36,15 @@ var Loader = function( exports )
 Loader.loadData('data/fr.json', function(data) {
   data = JSON.parse(data);
   var test = data.test;
+  var t = test;
 
   function launch() {
-    var t = test;
-    var test = MyApp.templates.test({
-        test: data.test
-    });
-    $('#test').html(test);
-    console.log('test');
+
+    var content_test = MyApp.templates.test(t);
+
+    $('#test').html(content_test);
   }
+
+  Anim.init();
   launch();
 });
