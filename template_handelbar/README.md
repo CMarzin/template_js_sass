@@ -1,11 +1,11 @@
-# Template handelbar
+# Template Handelbar JS
 
-# Installer les dépendances
+# Install Dependency
   - npm install
   - bower install
 
-# Lancer le dev
+# Launch Dev
   - gulp dev
 
-# Lancer la prod
+# Launch Prod
   -gulp build
