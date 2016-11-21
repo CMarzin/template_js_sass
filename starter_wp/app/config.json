@@ -1,0 +1,16 @@
+{
+    "path": {
+        "app": "app/",
+        "dist": "dist/"
+    },
+    "dependencies": {
+        "scripts": [
+            "node_modules/picturefill/dist/picturefill.js",
+            "app/js/main.js"
+        ],
+        "styles": [
+            "app/css/main.scss"
+        ]
+    },
+    "devUrl": "http://localhost/CloudStation/dev/wordpress/"
+}
