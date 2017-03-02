@@ -7,4 +7,4 @@
   - gulp dev
 
 # Launch Prod
-  -gulp build
+  - gulp build
