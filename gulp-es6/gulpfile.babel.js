@@ -11,14 +11,15 @@ import autoprefixer from 'gulp-autoprefixer';
 gulp.task("html", () => {
     return gulp.src("./app/*.html")
         .pipe(gulp.dest("./build"))
+        .pipe(browserSync.stream());
 });
 
 gulp.task("styles", () => {
-  return gulp.src("./app/sass/*.scss")
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest("./build/css"))
-    .pipe(browserSync.stream());
+    return gulp.src("./app/sass/*.scss")
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(autoprefixer())
+        .pipe(gulp.dest("./build/css"))
+        .pipe(browserSync.stream());
 });
 
 gulp.task("scripts", () => {
@@ -36,13 +37,13 @@ gulp.task("scripts", () => {
 
 gulp.task("startServer", () => {
     browserSync.init({
-      server: "./app"
-  });
+        server: "./build"
+    });
 });
 
 gulp.task('watch', () => {
-    gulp.watch('./app/*.html').on('change', browserSync.reload);
-    gulp.watch(['./app/js/*.js'], ['js']);
+    gulp.watch('./app/*.html', ['html']);
+    gulp.watch(['./app/js/*.js'], ['scripts']);
     gulp.watch(['./app/sass/**/*.scss'], ['styles']);
 });
 

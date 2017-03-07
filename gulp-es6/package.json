@@ -1,7 +1,7 @@
 {
   "name": "gulp-es6",
   "version": "1.0.0",
-  "description": "gulp compile es6",
+  "description": "gulp compile es6/sass",
   "main": "gulpfile.babel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
