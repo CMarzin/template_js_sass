@@ -1,0 +1,17 @@
+{
+  "name": "templates",
+  "version": "0.0.1",
+  "authors": [
+    "Corentin Marzin"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "handlebars": "^3.0.0"
+  }
+}
