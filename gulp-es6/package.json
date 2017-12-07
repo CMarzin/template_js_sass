@@ -4,7 +4,8 @@
   "description": "gulp compile es6/sass",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install gulp-cli && gulp build"
   },
   "author": "corentinmarzin@free.fr",
   "license": "ISC",
@@ -19,5 +20,8 @@
     "gulp-connect": "^5.0.0",
     "gulp-sass": "^3.1.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "gulp-cli": "^1.4.0"
   }
 }

@@ -15,7 +15,7 @@ gulp.task("html", () => {
 });
 
 gulp.task("styles", () => {
-    return gulp.src("./app/sass/*.scss")
+    return gulp.src("./app/stylesheets/*.scss")
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(gulp.dest("./build/css"))
@@ -24,7 +24,7 @@ gulp.task("styles", () => {
 
 gulp.task("scripts", () => {
     return browserify({
-            entries: ["./app/js/index.js"]
+            entries: ["./app/scripts/main.js"]
         })
         .transform(babelify.configure({
             presets: ["es2015"]
@@ -43,7 +43,7 @@ gulp.task("startServer", () => {
 
 gulp.task('watch', () => {
     gulp.watch('./app/*.html', ['html']);
-    gulp.watch(['./app/js/*.js'], ['scripts']);
+    gulp.watch(['./app/scripts/*.js'], ['scripts']);
     gulp.watch(['./app/sass/**/*.scss'], ['styles']);
 });
 

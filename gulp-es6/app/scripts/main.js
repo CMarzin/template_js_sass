@@ -1,6 +1,6 @@
-import Person from "./person";
+let test = {
+  'coucou': () => { console.log('coucou c\'est moi')} 
+}
 
-let person = new Person("Ram", "Kulkarni");
-console.log('kjnkj');
 
-document.getElementById("nameSpan").innerHTML = person.getFirstName() + " " + person.getLastName();
+test.coucou()
