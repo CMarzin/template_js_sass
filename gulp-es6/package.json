@@ -23,6 +23,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "gulp-cli": "^2.0.1"
+    "gulp-cli": "^2.0.1",
+    "node-notifier": "^5.2.1"
   }
 }
