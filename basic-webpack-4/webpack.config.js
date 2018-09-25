@@ -34,7 +34,7 @@ module.exports = {
   },
   plugins: [
     new HTMLPlugin({
-        title: 'Animation Leeroy Mia Pasta',
+        title: 'Webpack template for Animation',
         template: 'index.html'
       }
     ),
