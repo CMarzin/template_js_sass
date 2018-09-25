@@ -8,4 +8,6 @@
 
 ### Special Readme for each template
 
+Every template which are not in the folder are maintened
+
 __Free to use in any project you have (commercial or not)__
