@@ -1,0 +1,13 @@
+.container {
+  &_banner {
+    position: relative;
+    width: $banner-width;
+    height: $banner-height;
+    background: $red;
+
+    @import "animations/animation1";
+    @import "animations/animation2";
+    @import "animations/animation3";
+    @import "animations/animation4";
+  }
+}
